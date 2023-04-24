@@ -224,7 +224,7 @@ trait HasDisplayers
         $this->grid->listen(Grid\Events\Fetching::class, function () use ($showAll) {
             if ($this->grid->model()->getParentIdFromRequest()) {
                 $this->grid->disableFilter();
-                $this->grid->disableToolbar();
+                // $this->grid->disableToolbar();
 
                 if ($showAll) {
                     $this->grid->disablePagination();
